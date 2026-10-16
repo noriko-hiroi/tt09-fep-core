@@ -33,37 +33,36 @@ documentation:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  inputs:
-    - ui_in[0] "x_in bit 8 (Q1.14)"
-    - ui_in[1] "x_in bit 9"
-    - ui_in[2] "x_in bit 10"
-    - ui_in[3] "x_in bit 11"
-    - ui_in[4] "x_in bit 12"
-    - ui_in[5] "x_in bit 13"
-    - ui_in[6] "x_in bit 14"
-    - ui_in[7] "x_in bit 15 (Sign)"
+    - ui[0] "x_in bit 8 (Q1.14)"
+    - ui[1] "x_in bit 9"
+    - ui[2] "x_in bit 10"
+    - ui[3] "x_in bit 11"
+    - ui[4] "x_in bit 12"
+    - ui[5] "x_in bit 13"
+    - ui[6] "x_in bit 14"
+    - ui[7] "x_in bit 15 (Sign)"
 
   # Outputs
   outputs:
-    - uo_out[0] "mu_out bit 8 (Q1.14)"
-    - uo_out[1] "mu_out bit 9"
-    - uo_out[2] "mu_out bit 10"
-    - uo_out[3] "mu_out bit 11"
-    - uo_out[4] "mu_out bit 12"
-    - uo_out[5] "mu_out bit 13"
-    - uo_out[6] "mu_out bit 14"
-    - uo_out[7] "mu_out bit 15 (Sign)"
+    - uo[0] "mu_out bit 8 (Q1.14)"
+    - uo[1] "mu_out bit 9"
+    - uo[2] "mu_out bit 10"
+    - uo[3] "mu_out bit 11"
+    - uo[4] "mu_out bit 12"
+    - uo[5] "mu_out bit 13"
+    - uo[6] "mu_out bit 14"
+    - uo[7] "mu_out bit 15 (Sign)"
 
   # Bidirectional pins
   bidirectional:
-    - uio_out[0] "error_out bit 8"
-    - uio_out[1] "error_out bit 9"
-    - uio_out[2] "error_out bit 10"
-    - uio_out[3] "error_out bit 11"
-    - uio_out[4] "error_out bit 12"
-    - uio_out[5] "error_out bit 13"
-    - uio_out[6] "error_out bit 14"
-    - uio_out[7] "alert_gate flag"
+    - uio[0] "error_out bit 8"
+    - uio[1] "error_out bit 9"
+    - uio[2] "error_out bit 10"
+    - uio[3] "error_out bit 11"
+    - uio[4] "error_out bit 12"
+    - uio[5] "error_out bit 13"
+    - uio[6] "error_out bit 14"
+    - uio[7] "alert_gate flag"
 
 # Do not change!
 yaml_version: 6
