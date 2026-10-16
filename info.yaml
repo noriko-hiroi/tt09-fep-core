@@ -33,6 +33,7 @@ documentation:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
+  ui:
     - "x_in bit 8 (Q1.14)"
     - "x_in bit 9"
     - "x_in bit 10"
@@ -43,6 +44,7 @@ pinout:
     - "x_in bit 15 (Sign)"
 
   # Outputs
+  uo:
     - "mu_out bit 8 (Q1.14)"
     - "mu_out bit 9"
     - "mu_out bit 10"
@@ -53,6 +55,7 @@ pinout:
     - "mu_out bit 15 (Sign)"
 
   # Bidirectional pins
+  uio:
     - "error_out bit 8"
     - "error_out bit 9"
     - "error_out bit 10"
