@@ -33,37 +33,47 @@ documentation:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui:
-    - "x_in bit 8 (Q1.14)"
-    - "x_in bit 9"
-    - "x_in bit 10"
-    - "x_in bit 11"
-    - "x_in bit 12"
-    - "x_in bit 13"
-    - "x_in bit 14"
-    - "x_in bit 15 (Sign)"
+  inputs:
+    - ui_in[0] "x_in bit 8 (Q1.14)"
+    - ui_in[1] "x_in bit 9"
+    - ui_in[2] "x_in bit 10"
+    - ui_in[3] "x_in bit 11"
+    - ui_in[4] "x_in bit 12"
+    - ui_in[5] "x_in bit 13"
+    - ui_in[6] "x_in bit 14"
+    - ui_in[7] "x_in bit 15 (Sign)"
 
   # Outputs
-  uo:
-    - "mu_out bit 8 (Q1.14)"
-    - "mu_out bit 9"
-    - "mu_out bit 10"
-    - "mu_out bit 11"
-    - "mu_out bit 12"
-    - "mu_out bit 13"
-    - "mu_out bit 14"
-    - "mu_out bit 15 (Sign)"
+  outputs:
+    - uo_out[0] "mu_out bit 8 (Q1.14)"
+    - uo_out[1] "mu_out bit 9"
+    - uo_out[2] "mu_out bit 10"
+    - uo_out[3] "mu_out bit 11"
+    - uo_out[4] "mu_out bit 12"
+    - uo_out[5] "mu_out bit 13"
+    - uo_out[6] "mu_out bit 14"
+    - uo_out[7] "mu_out bit 15 (Sign)"
 
   # Bidirectional pins
-  uio:
-    - "error_out bit 8"
-    - "error_out bit 9"
-    - "error_out bit 10"
-    - "error_out bit 11"
-    - "error_out bit 12"
-    - "error_out bit 13"
-    - "error_out bit 14"
-    - "alert_gate flag"
+  bidirectional:
+    - uio_out[0] "error_out bit 8"
+    - uio_out[1] "error_out bit 9"
+    - uio_out[2] "error_out bit 10"
+    - uio_out[3] "error_out bit 11"
+    - uio_out[4] "error_out bit 12"
+    - uio_out[5] "error_out bit 13"
+    - uio_out[6] "error_out bit 14"
+    - uio_out[7] "alert_gate flag"
 
 # Do not change!
 yaml_version: 6
+
+# User information / Documentation
+documentation:
+  by_the_same_author: ""
+  how_it_works: |
+    Calculates prediction error (e = x - mu) and updates internal state mu using gradient descent.
+    Includes an adaptive suppression gate (alert_gate) to reduce learning rate during high-variance input.
+
+  how_to_test: |
+    Apply 8-bit Q1.14 input values to ui_in and observe internal state mu on uo_out.
