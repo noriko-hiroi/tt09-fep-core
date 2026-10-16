@@ -12,13 +12,5 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Setup Typst
-        uses: typst-community/setup-typst@v2
-
       - name: Build docs
         uses: TinyTapeout/tt-gds-action/docs@tt09
