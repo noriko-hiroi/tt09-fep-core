@@ -43,7 +43,6 @@ pinout:
     - ui[7] "x_in bit 15 (Sign)"
 
   # Outputs
-  outputs:
     - uo[0] "mu_out bit 8 (Q1.14)"
     - uo[1] "mu_out bit 9"
     - uo[2] "mu_out bit 10"
@@ -54,7 +53,6 @@ pinout:
     - uo[7] "mu_out bit 15 (Sign)"
 
   # Bidirectional pins
-  bidirectional:
     - uio[0] "error_out bit 8"
     - uio[1] "error_out bit 9"
     - uio[2] "error_out bit 10"
@@ -66,13 +64,3 @@ pinout:
 
 # Do not change!
 yaml_version: 6
-
-# User information / Documentation
-documentation:
-  by_the_same_author: ""
-  how_it_works: |
-    Calculates prediction error (e = x - mu) and updates internal state mu using gradient descent.
-    Includes an adaptive suppression gate (alert_gate) to reduce learning rate during high-variance input.
-
-  how_to_test: |
-    Apply 8-bit Q1.14 input values to ui_in and observe internal state mu on uo_out.
